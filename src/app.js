@@ -265,19 +265,16 @@ class FacebookBot {
                         data: event,
                         source: "facebook"
                     }
-                });
 
-		let apiaiRequest = apiAiService.textRequest(text,
-		{
-		sessionId: sessionIds.get(sender),
-		contexts: [
+		    contexts: [
 		{
 		name: "generic",
 		parameters: {
 		facebook_user: userName
 		}
-		}
-		});
+
+                });
+
 
             //get response from api.ai
             apiaiRequest.on('response', (response) => {
