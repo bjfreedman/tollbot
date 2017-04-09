@@ -266,13 +266,6 @@ class FacebookBot {
                         source: "facebook"
                     }
 
-		    contexts: [
-		{
-		name: "generic",
-		parameters: {
-		facebook_user: userName
-		}
-
                 });
 
 
