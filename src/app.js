@@ -264,16 +264,14 @@ class FacebookBot {
                     originalRequest: {
                         data: event,
                         source: "facebook"
-
-                        contexts: [
-                        {
-                        name: "generic",
-                        parameters: {
-                        facebook_user: userName
-                        }
-                        }]
                     }
-
+                    contexts: [
+                    {
+                    name: "generic",
+                    parameters: {
+                    facebook_user: userName
+                    }
+                    }]
                 });
 
             //get response from api.ai
