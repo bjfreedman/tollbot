@@ -268,9 +268,9 @@ class FacebookBot {
                 });
 
 
-            let apiaiRequest = apiAiService.textRequest(text,
+            let apiaiRequest = this.apiAiService.textRequest(text,
               {
-              sessionId: sessionIds.get(sender),
+              sessionId: this.sessionIds.get(sender),
               contexts: [
               {
               name: "generic",
