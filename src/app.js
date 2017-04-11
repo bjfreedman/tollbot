@@ -261,18 +261,25 @@ class FacebookBot {
             let apiaiRequest = this.apiAiService.textRequest(text,
                 {
                     sessionId: this.sessionIds.get(sender),
-                    contexts: [
-                    {
-                      name: "generic",
-                      parameters: {
-                        facebook_user: userName
-                      }
-                    }
                     originalRequest: {
                         data: event,
                         source: "facebook"
                     }
                 });
+
+
+            let apiaiRequest = apiAiService.textRequest(text,
+              {
+              sessionId: sessionIds.get(sender),
+              contexts: [
+              {
+              name: "generic",
+              parameters: {
+              facebook_user: userName
+              }
+              }]
+              });
+
             //get response from api.ai
             apiaiRequest.on('response', (response) => {
                 if (this.isDefined(response.result) && this.isDefined(response.result.fulfillment)) {
