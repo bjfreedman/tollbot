@@ -251,7 +251,7 @@ class FacebookBot {
 
         if (text) {
 
-            // Handle a text message from this sender
+            // Handle a text message from the sender
             if (!this.sessionIds.has(sender)) {
                 this.sessionIds.set(sender, uuid.v4());
             }
