@@ -236,9 +236,15 @@ class FacebookBot {
                 return event.message.text;
             }
         }
+        
+        if (event.postback) {
+            if (event.postback.payload) {
+                return event.postback.payload;
+            }
 
-        if (event.postback && event.postback.payload) {
-            return event.postback.payload;
+            if (event.postback.referral.ref) {
+                return event.postback.referral.ref;
+            }
         }
 
         return null;
