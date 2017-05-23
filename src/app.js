@@ -244,7 +244,7 @@ class FacebookBot {
             if (event.postback.referral.ref && barbrad =='true') { 
                  return event.postback.referral.ref;
                  event.postback.referral.ref = {};
-                 var barbrad = 'false';
+                 barbrad = 'false';
             }
             
             else {
