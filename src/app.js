@@ -243,9 +243,9 @@ class FacebookBot {
                 return event.postback.referral.ref;
             }
             
-             if (event.postback.payload) {
-                return event.postback.payload;
-            }
+             //if (event.postback.payload) {
+               // return event.postback.payload;
+            //}
         }
 
         return null;
