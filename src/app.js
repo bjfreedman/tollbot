@@ -237,12 +237,12 @@ class FacebookBot {
             }
         }
         
-        var referral = true; 
+        
         if (event.postback) {
                 
-            if (event.postback.referral.ref && referral) {
-                referral = false; 
-                return event.postback.referral.ref;
+            if (event.postback.referral.ref) { 
+                //return event.postback.referral.ref;
+                 return event.postback.payload;
             }
             
             else {
