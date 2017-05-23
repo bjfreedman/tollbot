@@ -241,7 +241,7 @@ class FacebookBot {
         
         if (event.postback) {
                 
-            if (event.postback.referral.ref && !event.postback.payload) { 
+            if (event.postback.referral.ref > 0 && !event.postback.payload) { 
                  return event.postback.referral.ref;
 
             }
