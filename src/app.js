@@ -242,7 +242,9 @@ class FacebookBot {
         if (event.postback) {
                 
             if (event.postback.referral.ref == 'mmm') { 
-                 return event.postback.referral.ref;
+                 //return event.postback.referral.ref;
+                 return event.postback.payload;
+
 
             }
             
