@@ -239,17 +239,34 @@ class FacebookBot {
         
         if (event.postback) {
       
-            if (event.postback.payload) {
-                 return event.postback.payload;
-            }
-       
-             else if (event.postback.referral.ref && event.postback.payload) {
+            if (event.postback.referral.ref && event.postback.payload) {
                 return event.postback.referral.ref;
             }
+            
+            else if (event.postback.payload) {
+                 return event.postback.payload;
+            }
+      
             
             else {
                 return null;   
             }
+    
+            
+            
+            //if (event.postback.payload) {
+              ///   return event.postback.payload;
+            //}
+       
+             //else if (event.postback.referral.ref && event.postback.payload) {
+               // return event.postback.referral.ref;
+            //}
+            
+            //else {
+              //  return null;   
+            //}
+            
+            
             
             
         }
