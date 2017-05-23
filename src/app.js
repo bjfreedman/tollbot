@@ -241,10 +241,10 @@ class FacebookBot {
         
         if (event.postback) {
                 
-            if (event.postback.referral.ref && barbrad =='true') { 
+            if (event.postback.referral.ref && barbrad == 'true') { 
                  return event.postback.referral.ref;
                  event.postback.referral.ref = {};
-                 barbrad = 'false';
+                 let barbrad = 'false';
             }
             
             else {
