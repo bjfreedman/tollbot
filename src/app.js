@@ -14,6 +14,7 @@ const APIAI_LANG = process.env.APIAI_LANG || 'en';
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
 const FB_TEXT_LIMIT = 640;
+var barbrad = 'true';
 
 class FacebookBot {
     constructor() {
@@ -240,9 +241,10 @@ class FacebookBot {
         
         if (event.postback) {
                 
-            if (event.postback.referral.ref) { 
+            if (event.postback.referral.ref && barbrad =='true') { 
                  return event.postback.referral.ref;
                  event.postback.referral.ref = {};
+                 var barbrad = 'false';
             }
             
             else {
