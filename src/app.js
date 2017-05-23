@@ -242,7 +242,7 @@ class FacebookBot {
                 
             if (event.postback.referral.ref) { 
                  return event.postback.referral.ref;
-                 event.postback.referral.ref = [];
+                 let event.postback.referral.ref = {};
             }
             
             else {
