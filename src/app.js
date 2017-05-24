@@ -238,19 +238,31 @@ class FacebookBot {
             }
         }
         
-        
         if (event.postback) {
-                
-            if (event.postback.referral.ref) { 
-                 //return event.postback.referral.ref;
-                 return event.postback.payload;
-
-
+      
+            if (event.postback.referral.ref) {
+                return event.postback.referral.ref;
+                console.log(event.postback.referral.ref);
             }
             
-            else {
-                 return event.postback.payload;
-            }            
+             if (event.postback.payload) {
+                return event.postback.payload;
+                console.log(event.postback.payload);
+            }
+        }
+        
+       // if (event.postback) {
+                
+          //  if (event.postback.referral.ref) { 
+                 //return event.postback.referral.ref;
+            //     return event.postback.payload;
+
+
+            //}
+            
+            //else {
+              //   return event.postback.payload;
+            //}            
             
             //if (event.postback.payload) {
               ///   return event.postback.payload;
