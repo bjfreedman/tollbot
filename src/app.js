@@ -259,7 +259,12 @@ class FacebookBot {
                     //return 'testing2';
                     
                 }
-             console.log('brad');
+            
+                else
+                {
+                    console.log('do nothing');
+                }
+           
                  
             }
         
