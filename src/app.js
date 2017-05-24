@@ -455,7 +455,7 @@ app.post('/webhook/', (req, res) => {
                 if (messaging_events) {
                     messaging_events.forEach((event) => {
                         if (event.message && !event.message.is_echo ||
-                            event.postback && event.postback.payload) {
+                            event.postback) {
                             facebookBot.processEvent(event);
                         }
                     });
