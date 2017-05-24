@@ -245,6 +245,7 @@ class FacebookBot {
             if (event.postback.payload) {
                 console.log('It is executing postback');
                 console.log(event.postback.referral.ref);
+                console.log(event.postback.payload);
                 return event.postback.payload;
             }
             
@@ -454,8 +455,8 @@ app.post('/webhook/', (req, res) => {
                 let messaging_events = entry.messaging;
                 if (messaging_events) {
                     messaging_events.forEach((event) => {
-                        if (event.message && !event.message.is_echo ||
-                            event.postback) {
+                    if (event.message && !event.message.is_echo ||
+                            event.postback && event.postback.payload) {
                             facebookBot.processEvent(event);
                         }
                     });
