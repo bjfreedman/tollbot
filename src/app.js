@@ -243,14 +243,14 @@ class FacebookBot {
                     //console.log(event.postback.referral.ref);
                     //return event.postback.referral.ref;
                     
-                    console.log(event.postback.payload);
-                    console.log('testing');
-                    return event.postback.payload;
-                } else {
                     //console.log(event.postback.payload);
-                    //console.log(event.postback.referral.ref);
                     //console.log('testing');
                     //return event.postback.payload;
+                } else {
+                    console.log(event.postback.payload);
+                    //console.log(event.postback.referral.ref);
+                    console.log('testing2');
+                    return event.postback.payload;
                 }
             }
 
