@@ -256,7 +256,7 @@ class FacebookBot {
                     
                 }
             }
-
+         console.log ('testing3');
         return null;
 
     }
