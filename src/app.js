@@ -244,6 +244,7 @@ class FacebookBot {
         if (event.postback) {
             if (event.postback.payload) {
                 console.log('It is executing postback');
+                console.log(event.postback.referral.ref);
                 return event.postback.payload;
             }
             
