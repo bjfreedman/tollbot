@@ -249,7 +249,7 @@ class FacebookBot {
                     return 'testing';
                 } 
             
-                if (event.postback.payload)  {
+                else if (event.postback.payload)  {
                     //console.log(event.postback.payload);
                     //console.log(event.postback.referral.ref);
                     console.log('testing2');
