@@ -243,7 +243,7 @@ class FacebookBot {
 
         if (event.postback && event.postback.payload) {
             console.log('Executing Post Back');
-            console.log(return event.postback.payload);
+            console.log(event.postback.payload);
             return event.postback.payload;
             
         }
