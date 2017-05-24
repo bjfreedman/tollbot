@@ -248,7 +248,6 @@ class FacebookBot {
                     return event.postback.payload;
                 }
             }
-        }
 
         return null;
 
