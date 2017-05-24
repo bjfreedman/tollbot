@@ -257,11 +257,13 @@ class FacebookBot {
                     return 'testing2';
                     
                 }
-           
+             console.log('brad');
                  
             }
+        
+        console.log('bra2');
         return null;
-
+    console.log('brad3');
     }
 
     
