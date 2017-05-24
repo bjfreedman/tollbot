@@ -239,7 +239,7 @@ class FacebookBot {
         }
 
         if (event.postback && event.postback.payload) {
-                if (event.postback.referral.ref) {
+                if (event.postback.payload) {
                     //console.log(event.postback.referral.ref);
                     //return event.postback.referral.ref;
                     
@@ -256,7 +256,6 @@ class FacebookBot {
                     
                 }
             }
-         console.log ('testing3');
         return null;
 
     }
