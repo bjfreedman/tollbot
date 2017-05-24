@@ -242,12 +242,12 @@ class FacebookBot {
       
             if (event.postback.referral.ref) {
                 return event.postback.referral.ref;
-                console.log(event.postback.referral.ref);
+                console.log('brad');
             }
             
              if (event.postback.payload) {
                 return event.postback.payload;
-                console.log(event.postback.payload);
+                console.log('brad2');
             }
         }
         
