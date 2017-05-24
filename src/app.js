@@ -237,54 +237,16 @@ class FacebookBot {
                 return event.message.text;
             }
         }
-        
-        if (event.postback) {
-      
-            if (event.postback.referral.ref) {
-                return event.postback.referral.ref;
-                console.log('brad');
-            }
-            
-             if (event.postback.payload) {
-                return event.postback.payload;
-                console.log('brad2');
-            }
-        }
-        
-       // if (event.postback) {
-                
-          //  if (event.postback.referral.ref) { 
-                 //return event.postback.referral.ref;
-            //     return event.postback.payload;
 
-
-            //}
-            
-            //else {
-              //   return event.postback.payload;
-            //}            
-            
-            //if (event.postback.payload) {
-              ///   return event.postback.payload;
-            //}
-       
-             //else if (event.postback.referral.ref && event.postback.payload) {
-               // return event.postback.referral.ref;
-            //}
-            
-            //else {
-              //  return null;   
-            //}
-            
-            
-            
-            
+        if (event.postback && event.postback.payload) {
+            return event.postback.payload;
+            console.log('brad');
         }
 
         return null;
 
     }
-
+    
     processEvent(event) {
         const sender = event.sender.id.toString();
         const text = this.getEventText(event);
