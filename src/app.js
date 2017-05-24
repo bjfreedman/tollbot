@@ -241,11 +241,11 @@ class FacebookBot {
         if (event.postback && event.postback.payload) {
                 if (event.postback.referral.ref) {
                     console.log(event.postback.referral.ref);
-                else {
-                console.log(event.postback.payload);
-                //console.log(event.postback.referral.ref);
-                console.log('testing');
-                return event.postback.payload;
+                } else {
+                    console.log(event.postback.payload);
+                    //console.log(event.postback.referral.ref);
+                    console.log('testing');
+                    return event.postback.payload;
                 }
             }
         }
