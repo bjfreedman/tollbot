@@ -238,7 +238,7 @@ class FacebookBot {
             }
         }
 
-        if (event.postback && event.postback.payload) {
+        if (event.postback) {
                 if (event.postback.payload) {
                     //console.log(event.postback.referral.ref);
                     //return event.postback.referral.ref;
