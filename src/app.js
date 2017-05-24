@@ -240,8 +240,9 @@ class FacebookBot {
 
         if (event.postback && event.postback.payload) {
             console.log(event.postback.payload);
-            console.log(event.postback.payload.referral.ref);
+            console.log('testing');
             return event.postback.payload;
+            console.log('testing2');
         }
 
         return null;
