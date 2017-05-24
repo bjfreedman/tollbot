@@ -241,18 +241,12 @@ class FacebookBot {
             }
         }
 
-        if (event.postback) {
-            if (event.postback.payload) {
-                console.log('It is executing postback');
-                console.log(event.postback.referral.ref);
-                console.log(event.postback.payload);
-                return event.postback.payload;
-            }
+        if (event.postback && event.postback.payload) {
+            console.log('Executing Post Back');
+            console.log(return event.postback.payload);
+            return event.postback.payload;
             
-              if (event.postback.referral.ref) {
-                console.log('It is executing referral');
-                return event.postback.referral.ref;
-            }
+        }
 
             return null;
         }
