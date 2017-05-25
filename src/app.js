@@ -451,7 +451,7 @@ app.post('/webhook/', (req, res) => {
         const data = JSONbig.parse(req.body);
 
         if (data.entry) {
-            console.log(data.entry);
+            console.log('test');
             let entries = data.entry;
             entries.forEach((entry) => {
                 let messaging_events = entry.messaging;
