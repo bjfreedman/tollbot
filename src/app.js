@@ -246,12 +246,15 @@ class FacebookBot {
                   
                     //return event.postback.referral.ref;
                     
+                    
+                    console.log(event.postback.payload);
+                    console.log('Payload');
                 } 
             
                 else if (event.postback.payload)  {
-                    console.log(event.postback.payload);
-                    console.log('Payload');
-                    return event.postback.payload;
+                    //console.log(event.postback.payload);
+                    //console.log('Payload');
+                    //return event.postback.payload;
                     
                 }
             
