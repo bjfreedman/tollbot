@@ -240,37 +240,30 @@ class FacebookBot {
 
         if (event.postback) {
                 if (event.postback.referral.ref && event.postback.payload == 'USER_DEFINED_PAYLOAD') {
-                    console.log(event.postback.payload);
-                    console.log(event.postback.referral.ref);
-                  
-                    return event.postback.referral.ref;
-                    
                     //console.log(event.postback.payload);
-                    //console.log('testing');
-                    //return event.postback.payload;
-                    //return 'testing';
+                    //console.log(event.postback.referral.ref);
+                    //console.log('Referral');
+                  
+                    //return event.postback.referral.ref;
+                    
                 } 
             
                 else if (event.postback.payload)  {
                     console.log(event.postback.payload);
-                    //console.log(event.postback.referral.ref);
-                    //console.log('testing2');
+                    console.log('Payload');
                     return event.postback.payload;
-                    //return 'testing2';
                     
                 }
             
                 else
                 {
-                    console.log('do nothing');
+                    console.log('Do Nothing');
                 }
            
                  
             }
         
-        console.log('bra2');
         return null;
-    console.log('brad3');
     }
 
     
