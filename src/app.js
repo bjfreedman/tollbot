@@ -451,6 +451,7 @@ app.post('/webhook/', (req, res) => {
         const data = JSONbig.parse(req.body);
 
         if (data.entry) {
+            console.out(data.entry);
             let entries = data.entry;
             entries.forEach((entry) => {
                 let messaging_events = entry.messaging;
@@ -458,7 +459,7 @@ app.post('/webhook/', (req, res) => {
                     messaging_events.forEach((event) => {
                     if (event.message && !event.message.is_echo ||
                             event.postback && event.postback.payload || event.referral) {
-                            console.log(event);
+                            //console.log(event);
                             facebookBot.processEvent(event);
                         }
                     });
