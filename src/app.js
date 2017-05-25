@@ -238,7 +238,7 @@ class FacebookBot {
                 return event.message.text;
             }
         }
-
+        console.log(event.postback, event.postback.payload);
         if (event.postback && event.postback.payload) {
             console.log('Postback Webhook')
             console.log(event.postback.payload);
