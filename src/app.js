@@ -229,7 +229,7 @@ class FacebookBot {
 
      //which webhook event
     getEventText(event) {
-        console.log(event.postback, event.postback.payload);
+        
         if (event.message) {
             if (event.message.quick_reply && event.message.quick_reply.payload) {
                 return event.message.quick_reply.payload;
@@ -240,6 +240,7 @@ class FacebookBot {
             }
         }
         
+        console.log(event.postback, event.postback.payload);
         if (event.postback && event.postback.payload) {
             console.log('Postback Webhook');
             if(event.postback.payload && event.postback.referral) {
@@ -249,8 +250,8 @@ class FacebookBot {
             console.log(event.postback.payload);
             return event.postback.payload;
         }
-        
-         if (event.messaging_referrals && event.messaging_referrals.ref) {
+         console.log(event.referral);
+         if (event.referral && event.referral.ref) {
             console.log('Referral Webhook');
             console.log(event.referral.ref);
             return event.referral.ref;
