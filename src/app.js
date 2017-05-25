@@ -240,6 +240,9 @@ class FacebookBot {
         }
 
         if (event.postback && event.postback.payload) {
+            console.log('Postback Webhook')
+            console.log('event.postback.payload');
+            console.log('Finished');
             return event.postback.payload;
         }
 
