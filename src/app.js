@@ -241,7 +241,7 @@ class FacebookBot {
         console.log(event.postback, event.postback.payload);
         
         if (event.postback && event.postback.payload) {
-            console.log('Postback Webhook')
+            console.log('Postback Webhook');
             if(event.postback.payload && event.postback.referral) {
                 console.log(event.postback.referral.ref);
                 return event.postback.referral.ref;
