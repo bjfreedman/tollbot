@@ -263,9 +263,11 @@ class FacebookBot {
             
     processEvent(event) {
         const sender = event.sender.id.toString();
+        //remove this  
+        console.log(event);
         const text = this.getEventText(event);
         
-        console.log(text);
+      ;
 
         if (text) {
 
