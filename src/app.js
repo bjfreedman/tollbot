@@ -404,7 +404,7 @@ class FacebookBot {
     isDefined(obj) {
         if (typeof obj == 'undefined') {
             return false;
-       get
+        }
         if (!obj) {
             return false;
         }
