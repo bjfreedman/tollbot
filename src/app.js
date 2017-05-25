@@ -226,7 +226,8 @@ class FacebookBot {
                 .catch(err => callback(err));
         });
     }
- //which webhook event
+
+     //which webhook event
     getEventText(event) {
         if (event.message) {
             if (event.message.quick_reply && event.message.quick_reply.payload) {
@@ -238,40 +239,14 @@ class FacebookBot {
             }
         }
 
-        if (event.postback) {
-                if (event.postback.referral.ref && event.postback.payload == 'USER_DEFINED_PAYLOAD') {
-                    //console.log(event.postback.payload);
-                    //console.log(event.postback.referral.ref);
-                    //console.log('Referral');
-                  
-                    //return event.postback.referral.ref;
-                    
-                    
-                    //console.log(event.postback.payload);
-                    //console.log('Payload');
-                    
-                    console.log('one');
-                } 
-            
-                else if (event.postback.payload)  {
-                    //console.log(event.postback.payload);
-                    //console.log('Payload');
-                    //return event.postback.payload;
-                     console.log('two');
-                }
-            
-                else
-                {
-                    console.log('Do Nothing');
-                }
-           
-                 
-            }
-                console.log('three');
-        return null;
-    }
+        if (event.postback && event.postback.payload) {
+            return event.postback.payload;
+        }
 
-    
+        return null;
+
+    }
+            
     processEvent(event) {
         const sender = event.sender.id.toString();
         const text = this.getEventText(event);
