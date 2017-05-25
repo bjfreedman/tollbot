@@ -239,10 +239,14 @@ class FacebookBot {
             }
         }
         console.log(event.postback, event.postback.payload);
+        
         if (event.postback && event.postback.payload) {
             console.log('Postback Webhook')
+            if(event.postback.payload && event.postback.referral) {
+                console.log(event.postback.referral.ref);
+                return event.postback.referral.ref;
+            }
             console.log(event.postback.payload);
-            //console.log(event.postback.referral.ref);
             return event.postback.payload;
         }
 
@@ -400,8 +404,7 @@ class FacebookBot {
     isDefined(obj) {
         if (typeof obj == 'undefined') {
             return false;
-        }
-
+       get
         if (!obj) {
             return false;
         }
