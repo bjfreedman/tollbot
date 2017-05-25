@@ -264,6 +264,8 @@ class FacebookBot {
     processEvent(event) {
         const sender = event.sender.id.toString();
         const text = this.getEventText(event);
+        
+        console.log(text);
 
         if (text) {
 
@@ -454,13 +456,11 @@ app.post('/webhook/', (req, res) => {
             let entries = data.entry;
             entries.forEach((entry) => {
                 let messaging_events = entry.messaging;
-                console.log(messaging_events);
                 if (messaging_events) {
-                    console.log(event);
                     messaging_events.forEach((event) => {
                     if (event.message && !event.message.is_echo ||
                             event.postback && event.postback.payload || event.referral) {
-                            //console.log(event);
+                            console.log(event);
                             facebookBot.processEvent(event);
                         }
                     });
