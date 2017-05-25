@@ -249,6 +249,12 @@ class FacebookBot {
             console.log(event.postback.payload);
             return event.postback.payload;
         }
+        
+         if (event.referal && event.referral.ref) {
+            console.log('Referral Webhook');
+            console.log(event.referral.ref);
+            return event.referral.ref;
+        }
 
         return null;
 
