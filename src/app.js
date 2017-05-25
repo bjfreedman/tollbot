@@ -451,11 +451,12 @@ app.post('/webhook/', (req, res) => {
         const data = JSONbig.parse(req.body);
 
         if (data.entry) {
-            console.log('test');
             let entries = data.entry;
             entries.forEach((entry) => {
                 let messaging_events = entry.messaging;
+                console.log(messaging_events);
                 if (messaging_events) {
+                    console.log(event);
                     messaging_events.forEach((event) => {
                     if (event.message && !event.message.is_echo ||
                             event.postback && event.postback.payload || event.referral) {
