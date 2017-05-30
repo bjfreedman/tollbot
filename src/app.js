@@ -264,12 +264,9 @@ class FacebookBot {
     processEvent(event) {
         const sender = event.sender.id.toString();
         console.log(event);
-        if(!pausedUsers[recipientId]){
         const text = this.getEventText(event);
-        }
         
-      ;
-
+      
         if (text) {
 
             // Handle a text message from the sender
