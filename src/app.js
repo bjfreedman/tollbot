@@ -441,10 +441,11 @@ app.use(bodyParser.text({type: 'application/json'}));
 
 var pausedUsers = {}
 app.post('/pause', function (req, res) {
-  const userId = req.body.userId
-  const paused = req.body.paused
-  pausedUsers[userId] = paused
-  res.send("ok")
+  const userId = req.body.userId;
+  const paused = req.body.paused;
+  pausedUsers[userId] = paused;
+  res.send("ok");
+  console.log('paused');
 });
 
 app.get('/webhook/', (req, res) => {
