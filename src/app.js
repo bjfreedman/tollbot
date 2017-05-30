@@ -15,13 +15,6 @@ const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
 const FB_TEXT_LIMIT = 640;
 
-var pausedUsers = {}
-app.post('/pause', jsonParser, function (req, res) {
-  const userId = req.body.userId
-  const paused = req.body.paused
-  pausedUsers[userId] = paused
-  res.send("ok")
-});
 
 class FacebookBot {
     constructor() {
@@ -445,6 +438,14 @@ let facebookBot = new FacebookBot();
 const app = express();
 
 app.use(bodyParser.text({type: 'application/json'}));
+
+var pausedUsers = {}
+app.post('/pause', jsonParser, function (req, res) {
+  const userId = req.body.userId
+  const paused = req.body.paused
+  pausedUsers[userId] = paused
+  res.send("ok")
+});
 
 app.get('/webhook/', (req, res) => {
     if (req.query['hub.verify_token'] == FB_VERIFY_TOKEN) {
