@@ -440,7 +440,7 @@ const app = express();
 app.use(bodyParser.text({type: 'application/json'}));
 
 var pausedUsers = {}
-app.post('/pause', jsonParser, function (req, res) {
+app.post('/pause', function (req, res) {
   const userId = req.body.userId
   const paused = req.body.paused
   pausedUsers[userId] = paused
