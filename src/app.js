@@ -14,7 +14,14 @@ const APIAI_LANG = process.env.APIAI_LANG || 'en';
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
 const FB_TEXT_LIMIT = 640;
-var barbrad = 'true';
+
+var pausedUsers = {}
+app.post('/pause', jsonParser, function (req, res) {
+  const userId = req.body.userId
+  const paused = req.body.paused
+  pausedUsers[userId] = paused
+  res.send("ok")
+})
 
 class FacebookBot {
     constructor() {
