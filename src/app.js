@@ -473,7 +473,9 @@ app.post('/webhook/', (req, res) => {
                     if (event.message && !event.message.is_echo ||
                             event.postback && event.postback.payload || event.referral) {
                             console.log(event);
-                            facebookBot.processEvent(event);
+                            if(!pausedUsers[recipientId]){
+                                facebookBot.processEvent(event);
+                            }
                         }
                     });
                 }
