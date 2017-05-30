@@ -21,7 +21,7 @@ app.post('/pause', jsonParser, function (req, res) {
   const paused = req.body.paused
   pausedUsers[userId] = paused
   res.send("ok")
-})
+});
 
 class FacebookBot {
     constructor() {
