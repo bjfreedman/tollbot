@@ -263,10 +263,10 @@ class FacebookBot {
             
     processEvent(event) {
         const sender = event.sender.id.toString();
-        //remove this  
-        console.log('sarah');
         console.log(event);
+        if(!pausedUsers[recipientId]){
         const text = this.getEventText(event);
+        }
         
       ;
 
